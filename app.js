@@ -1,6 +1,8 @@
 import carros2024 from './tabelacarros.js';
 import express from 'express';
 
+import { modeloCarro, modeloAtualizacaoCarro } from './validacao.js';
+
 const app = express();
 
 app.use(express.json());
