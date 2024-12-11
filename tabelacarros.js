@@ -11,7 +11,7 @@ const carros2024 = [
         velocidadeMaxima: 340,
         potencia: 800,
         consumo: 5.5,
-        acelaracao: 2.9,
+        aceleracao: 2.9,
         preco: 300000,
     },
 
@@ -21,7 +21,7 @@ const carros2024 = [
         velocidadeMaxima: 355,
         potencia: 770,
         consumo: 6.2,
-        acelaracao: 2.8,
+        aceleracao: 2.8,
         preco: 330000,
     },
 
@@ -31,7 +31,7 @@ const carros2024 = [
         velocidadeMaxima: 220,
         potencia: 200,
         consumo: 12.0,
-        acelaracao: 6.5,
+        aceleracao: 6.5,
         preco: 350000,
     },
 
@@ -41,7 +41,7 @@ const carros2024 = [
         velocidadeMaxima: 355,
         potencia: 770,
         consumo: 6.2,
-        acelaracao: 2.8,
+        aceleracao: 2.8,
         preco: 250000,
     },
 

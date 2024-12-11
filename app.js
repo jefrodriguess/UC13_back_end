@@ -24,6 +24,17 @@ app.get ('/:sigla', (req, res) => {
 
 app.post("/", (req, res) => {
     const novoCarro = req.body; // Obtém o corpo enviado para incluir um carro
+    const carroExiste = carros2024.find(carro => carro.sigla === novoCarro.sigla)
+    if (carroExiste) {
+        return res.status(400).send('Ja existe em carro cadastrado com essa sigla!')
+    }
+    //JOI
+    const { error } = modeloCarro.validate(novoCarro);
+    if (error) {
+        // Se houver erro retorna erro 400 (Bad Request).
+        res.status(400).send(error);
+        return;
+    }
     carros2024.push(novoCarro); // Adiciona o novo carro à lista de carros 
     res.status(200).send(novoCarro); //Retona o carro adicionado com status 200 (OK)
 
@@ -35,7 +46,14 @@ app.put('/:sigla', (req, res) => {
     if (!carroSelecionado) {
         res.status(404).send("Não existe um carro com a sigla informada!"); // Mensagem de erro
         return;
-    }
+    };
+// Joi
+    const { error } = modeloAtualizacaoCarro.validate(req.body);
+    if (error) {
+        // Se houver erro no modelo/validação retorna erro
+        res.status(400).send(error);
+        return;
+    }    
     const campos = Object.keys(req.body); // Obtém o corpo da requisição enviada
     for (let campo of campos) {
         carroSelecionado[campo] = req.body[campo]; // Atualiza o carro com a informação
