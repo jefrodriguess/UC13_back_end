@@ -156,3 +156,37 @@ Remove um carro específico pela sigla.
     "preco": 130000
 }
 ```
+
+## Como rodar o pojeto 
+
+1. **Clone este repositório:**
+
+```bash
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+
+2. **Instale as dependências:**
+
+Navegue até o diretório do projeto e execute o comando:
+
+```bash
+npm install
+```
+
+3. **Inicie o Servidor**
+ 
+Após a instalação das dpendencias, inicie o seridor:
+
+```bash 
+node ./app.js
+```
+
+4. **Acesse a API**
+A API esta disponivel em [http://locahost:3001]
+
+## Validações 
+
+Os dados enviados para API são validados com **Joi** para garantir que todos os campos sejam fornecidos corretamente. As validações incluem:
+- O nome do carro deve ter pelo menos 3 caracteres
+- A sigla deve ter exatamente 3 caracteres.
+- A potência, velôcidade maxíma, consumo, aceleração e preço devem ser números válidos 
+- Durante a atualização, pelo menos um campo precisa ser fornecido. 
