@@ -1,4 +1,4 @@
-import Joi from "joi"; // importação do join
+import Joi from "Joi"; // importação do join
 
 export const modeloCarro = Joi.object({ // bloco de validação 
     nome: Joi.string().min(3).required().messages({  // Nome do carro com no min. 3 caracteres 

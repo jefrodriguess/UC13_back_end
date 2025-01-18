@@ -146,3 +146,4 @@ export const deleteCarro = (sigla) => {
     const [carroRemovido] = carros2024.splice(carroIndex, 1); // Remove o carro da lista e retorna o carro removido
     return carroRemovido;
 };
+
